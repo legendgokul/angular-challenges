@@ -1,0 +1,14 @@
+1. projected img tag along with select from parent(student comp) via ng-content.
+why? this is done to avoid repeated *ngIf to check for type and show proper image from card-comp
+
+2. Moving Addlogic into parent-comp (student-comp) using Output Logic
+why? each respective component will handle the data adding part instead of card-comp , because card-comp is just a template.
+
+3. Since the challenge asks us to maintain the *ngFor loop inside card-comp, 
+    we will create a template in student-comp,(pass list-comp binding)  
+    which will later gets consumed within card-comp using ngTemplateOutlet directive.
+    we will access the passed template using @ContentChild decorator.
+
+4. similar to how we pass img via ng-content ,we can do same for name inside list-comp.
+
+5. similar to add we can create delete event for list-comp.
